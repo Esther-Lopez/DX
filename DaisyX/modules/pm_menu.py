@@ -80,15 +80,11 @@ async def get_start_func(message, strings, edit=False):
     buttons.add(InlineKeyboardButton(strings["btn_help"], callback_data="get_help"))
     buttons.add(
         InlineKeyboardButton(strings["btn_lang"], callback_data="lang_btn"),
-        InlineKeyboardButton(
-            strings["btn_source"], url="https://github.com/"
-        ),
+        InlineKeyboardButton(strings["btn_source"], url="https://github.com/"),
     )
     buttons.add(
         InlineKeyboardButton(strings["btn_channel"], url="https://t.me/pdfmalayalam"),
-        InlineKeyboardButton(
-            strings["btn_group"], url="https://t.me/onlinestoylovers"
-        ),
+        InlineKeyboardButton(strings["btn_group"], url="https://t.me/onlinestoylovers"),
     )
     buttons.add(
         InlineKeyboardButton(
