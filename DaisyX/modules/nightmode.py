@@ -82,7 +82,7 @@ async def close_ws(event):
                 return
             add_nightmode(str(event.chat_id))
             await event.reply(
-                f"**Added Chat {event.chat.title} With Id {event.chat_id} To Database. This Group Will Be Closed On 12Am(IST) And Will Opened On 06Am(IST)**"
+                f"**Added Chat {event.chat.title} With Id {event.chat_id} To Database. This Group Will Be Closed On 11.30pm(IST) And Will Opened On 07Am(IST)**"
             )
         elif (
             input_str == "off"
@@ -113,7 +113,7 @@ async def job_close():
         try:
             await tbot.send_message(
                 int(warner.chat_id),
-                "`12:00 Am, Group Is Closing Till 6 Am. Night Mode Started !` \n**Powered By @DaisyXbot**",
+                "`11:30 pm, Group Is Closing Till 7 Am. Night Mode Started !` \n**Good Night & Sweet Dreams**",
             )
             await tbot(
                 functions.messages.EditChatDefaultBannedRightsRequest(
@@ -131,7 +131,7 @@ async def job_close():
 
 
 scheduler = AsyncIOScheduler(timezone="Asia/Kolkata")
-scheduler.add_job(job_close, trigger="cron", hour=23, minute=55)
+scheduler.add_job(job_close, trigger="cron", hour=23, minute=30)
 scheduler.start()
 
 
@@ -143,7 +143,7 @@ async def job_open():
         try:
             await tbot.send_message(
                 int(warner.chat_id),
-                "`06:00 Am, Group Is Opening.`\n**Powered By @DaisyXBot**",
+                "`07:00 Am, Group Is Opening.`\n**Good Morning Friends**",
             )
             await tbot(
                 functions.messages.EditChatDefaultBannedRightsRequest(
@@ -156,7 +156,7 @@ async def job_open():
 
 # Run everyday at 06
 scheduler = AsyncIOScheduler(timezone="Asia/Kolkata")
-scheduler.add_job(job_open, trigger="cron", hour=6, minute=10)
+scheduler.add_job(job_open, trigger="cron", hour=7, minute=10)
 scheduler.start()
 
 __mod_name__ = "Night Mode"
