@@ -187,7 +187,7 @@ STRINGS:
 
   pm_menu:
     start_hi_group: 'Hey there! '
-    start_hi: "Hey there! My name is <b>@kalippibot.</b>\nI can help manage your groups with useful features, feel free to add me to your groups!"
+    start_hi: "Hey there! My name is <b>@kalippibot.</b>\n you can't use me in your group. my creator create me for his personal use"
     btn_source: "📜 Source code"
     btn_help: "❔ Help"
     btn_lang: "🇺🇸 Language"
